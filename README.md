@@ -14,7 +14,7 @@ A very simple loader to ```require()``` based on glob pattern matching.
 
 ### Load a Single file
 ```js
-  var loader = require('node-loader')
+  var loader = require('node-glob-loader')
 
   loader.load('./foo.js', function (exports) {
     exports.foo();
@@ -23,7 +23,7 @@ A very simple loader to ```require()``` based on glob pattern matching.
 
 ### Load a Directory
 ```js
-  var loader = require('node-loader')
+  var loader = require('node-glob-loader')
 
   loader.load('./foo/*.js', function (exports) {
     exports.foo();
@@ -34,7 +34,7 @@ A very simple loader to ```require()``` based on glob pattern matching.
 
 ### Exclude foo.js
 ```js
-  var loader = require('node-loader')
+  var loader = require('node-glob-loaderr')
 
   loader.load('./foo/[!foo]*.js', function (exports) {
     exports.bar();
@@ -46,7 +46,7 @@ A very simple loader to ```require()``` based on glob pattern matching.
 ## Signatures
 
 ```js
-function load (pattern, options, callback) {
+function load(pattern, options, callback) {
   /*...*/
 }
 ```
