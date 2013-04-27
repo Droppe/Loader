@@ -44,7 +44,7 @@ function load(pattern, [options], callback) {
   });
 ```
 
-### Load the ```foo``` Directory Excluding bar.js
+### Load the ```foo``` Directory Excluding ```bar.js```
 ```js
   var loader = require('node-glob-loaderr')
 
