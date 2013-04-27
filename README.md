@@ -106,19 +106,19 @@ Within ‘[’ and ‘]’, the syntax [.symbol.] matches the collating symbol s
 
 If the extglob shell option is enabled using the shopt builtin, several extended pattern matching operators are recognized. In the following description, a pattern-list is a list of one or more patterns separated by a ‘|’. Composite patterns may be formed using one or more of the following sub-patterns:
 
-####?(pattern-list)
+###?(pattern-list)
 Matches zero or one occurrence of the given patterns.
 
-####*(pattern-list)
+###*(pattern-list)
 Matches zero or more occurrences of the given patterns.
 
-####+(pattern-list)
+###+(pattern-list)
 Matches one or more occurrences of the given patterns.
 
-####@(pattern-list)
+###@(pattern-list)
 Matches one of the given patterns.
 
-####!(pattern-list)
+###!(pattern-list)
 Matches anything except one of the given patterns.
 
 
