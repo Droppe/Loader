@@ -41,35 +41,22 @@ describe('loader', function() {
         load += 1;
       }
     }).then(function () {
-      expect(load).toEqual(3);
+      expect(load).toEqual(6);
       done();
     });
   });
 
-  // it('should load a dir and files matching a pattern ', function (done) {
-  //   var load = 0;
+  it('should load files matching a complex pattern', function (done) {
+    var load = 0;
 
-  //   loader.load('{./spec/dir_to_load/**/*.js,/usr/local/*}"', function (exports) {
-  //     if (exports('Hello World!') === 'Hello World!') {
-  //       load += 1;
-  //     }
-  //   }).then(function () {
-  //     expect(load).toEqual(4);
-  //     done();
-  //   });
-  // });
-
-  // it('should load a files matching a pattern and exlcude foo.js', function (done) {
-  //   var load = 0;
-
-  //   loader.load('./spec/dir_to_load/*.js ', function (exports) {
-  //     if (exports('Hello World!') === 'Hello World!') {
-  //       load += 1;
-  //     }
-  //   }).then(function () {
-  //     expect(load).toEqual(2);
-  //     done();
-  //   });
-  // });
+    loader.load('./spec/dir_to_load/**/[!foo]*.js', {debug: true}, function (exports) {
+      if (exports('Hello World!') === 'Hello World!') {
+        load += 1;
+      }
+    }).then(function () {
+      expect(load).toEqual(4);
+      done();
+    });
+  });
 
 });
