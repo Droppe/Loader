@@ -1,6 +1,6 @@
 # Loader
 
-A very simple loader to require() based on glob pattern matching.
+A very simple loader to ```require()``` based on glob pattern matching.
 
 ## Installation
 
