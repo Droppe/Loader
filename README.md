@@ -43,6 +43,18 @@ A very simple loader to require() based on glob pattern matching.
 
 ### [RTFM:Pattern-Matching](http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching)
 
+## Signatures
+
+```js
+function load (pattern, options, callback) {
+  /*...*/
+}
+```
+
+- pattern: A glob pattern
+- options: an optional [options](https://github.com/isaacs/node-glob) object
+- callback: a callback that is called once per matched file with ```exports```
+
 
 ## License 
 
