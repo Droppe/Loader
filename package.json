@@ -1,0 +1,16 @@
+{
+  "name": "Loader",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "http://learnboost.github.com/kue/",
+  "keywords": [],
+  "author": "Robert Martone <robert@drop.pe>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Droppe/Loader.git"
+  },
+  "dependencies": {
+    "promised-io": "~0.3.3"
+  },
+  "main": "index"
+}
