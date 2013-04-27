@@ -10,9 +10,21 @@ A very simple loader to ```require()``` based on glob pattern matching.
   - supports glob matching ala [node-glob](https://github.com/isaacs/node-glob)
   - supports deferrals ala [promised-io](https://github.com/kriszyp/promised-io)
 
+## Signatures
+
+```js
+function load(pattern, [options], callback) {
+  /*...*/
+}
+```
+
+- pattern: A glob pattern
+- options: an optional [options](https://github.com/isaacs/node-glob#options) object
+- callback: a callback that is called once per matched file with ```exports```
+
 ## Examples
 
-### Load a Single file
+### Load a Single File
 ```js
   var loader = require('node-glob-loader')
 
@@ -42,18 +54,6 @@ A very simple loader to ```require()``` based on glob pattern matching.
 ```
 
 ### [RTFM:Pattern-Matching](http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching)
-
-## Signatures
-
-```js
-function load(pattern, options, callback) {
-  /*...*/
-}
-```
-
-- pattern: A glob pattern
-- options: an optional [options](https://github.com/isaacs/node-glob) object
-- callback: a callback that is called once per matched file with ```exports```
 
 
 ## License 
