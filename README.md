@@ -33,7 +33,7 @@ function load(pattern, [options], callback) {
   });
 ```
 
-### Load a Directory, When You're [DONE](https://github.com/kriszyp/promised-io) – YEAH!
+### Load a Directory... When You're [DONE](https://github.com/kriszyp/promised-io) – YEAH!
 ```js
   var loader = require('node-glob-loader')
 
@@ -53,7 +53,7 @@ function load(pattern, [options], callback) {
   });
 ```
 
-### Load .js Files in ```foo```'s Tree [THEN](https://github.com/kriszyp/promised-io) Do Something Nice
+### Load ```.js``` Files in ```foo```'s Tree [THEN](https://github.com/kriszyp/promised-io) Do Something Nice
 ```
 var loader = require('node-glob-loader')
 
