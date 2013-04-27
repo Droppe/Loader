@@ -1,6 +1,6 @@
 # Loader
 
-Loader require()s files based on glob pattern matching.
+A very simple loader to require() based on glob pattern matching.
 
 ## Installation
 
@@ -12,7 +12,7 @@ Loader require()s files based on glob pattern matching.
 
 ## Examples
 
-  - Load a single file
+  ### Load a single file
   ```js
     var loader = require('node-loader')
 
@@ -21,11 +21,10 @@ Loader require()s files based on glob pattern matching.
     });
   ```
 
-  - Load a directory
+  ### Load a directory
   ```js
     var loader = require('node-loader')
 
-    //This loads all .js files in the foo directory
     loader.load('./foo/*.js', function (exports) {
       exports.foo();
     }).done(function () {
@@ -33,7 +32,7 @@ Loader require()s files based on glob pattern matching.
     });
   ```
 
-  - Exclude foo.js
+  ### Exclude foo.js
   ```js
     var loader = require('node-loader')
 
