@@ -4,7 +4,7 @@ A very simple loader to ```require()``` based on glob pattern matching.
 
 ## Installation
 
-    $ npm install node-loader
+    $ npm install node-glob-loader
 
 ## Features
   - supports glob matching ala [node-glob](https://github.com/isaacs/node-glob)
