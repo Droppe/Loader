@@ -54,7 +54,7 @@ function load(pattern, [options], callback) {
 ```
 
 ### Load ```.js``` Files in ```foo```'s Tree [THEN](https://github.com/kriszyp/promised-io) Do Something Nice
-```
+```js
 var loader = require('node-glob-loader')
 
 loader.load('./foo/**/*.js', function (exports) {
