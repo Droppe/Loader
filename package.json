@@ -1,9 +1,7 @@
 {
   "name": "Loader",
   "version": "0.0.0",
-  "description": "",
-  "homepage": "http://learnboost.github.com/kue/",
-  "keywords": [],
+  "description": "A very simple loader to require() based on glob pattern matching.",
   "author": "Robert Martone <robert@drop.pe>",
   "repository": {
     "type": "git",
@@ -13,6 +11,13 @@
     "promised-io": "~0.3.3",
     "glob": "~3.2.1"
   },
+  "keywords": [
+    "node-loader",
+    "autoload",
+    "bootstrap",
+    "glob",
+    "require"
+  ],
   "scripts": {
     "test": "supervisor -w spec/,lib/ -n exit -x jasmine-node spec/"
   },
