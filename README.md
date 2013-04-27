@@ -41,7 +41,8 @@ A very simple loader to require() based on glob pattern matching.
   });
 ```
 
-  - [RTFM:Pattern-Matching](http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching)
+### [RTFM:Pattern-Matching](http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching)
+
 
 ## License 
 
