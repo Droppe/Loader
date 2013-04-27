@@ -7,42 +7,42 @@ Loader require()s files based on glob pattern matching.
     $ npm install node-loader
 
 ## Features
-  - supports glob matching ala (node-glob)[https://github.com/isaacs/node-glob]
-  - supports deferrals ala (promised-io)[https://github.com/kriszyp/promised-io]
+  - supports glob matching ala [node-glob](https://github.com/isaacs/node-glob)
+  - supports deferrals ala [promised-io](https://github.com/kriszyp/promised-io)
 
 ## Examples
 
   - Load a single file
   ```js
-  var loader = require('node-loader')
+    var loader = require('node-loader')
 
-  loader.load('./foo.js', function (exports) {
-    exports.foo();
-  });
+    loader.load('./foo.js', function (exports) {
+      exports.foo();
+    });
   ```
 
   - Load a directory
   ```js
-  var loader = require('node-loader')
+    var loader = require('node-loader')
 
-  //This loads all .js files in the foo directory
-  loader.load('./foo/*.js', function (exports) {
-    exports.foo();
-  }).done(function () {
-    //Yeah!
-  });
+    //This loads all .js files in the foo directory
+    loader.load('./foo/*.js', function (exports) {
+      exports.foo();
+    }).done(function () {
+      //Yeah!
+    });
   ```
 
   - Exclude foo.js
   ```js
-  var loader = require('node-loader')
+    var loader = require('node-loader')
 
-  loader.load('./foo/[!foo]*.js', function (exports) {
-    exports.bar();
-  });
+    loader.load('./foo/[!foo]*.js', function (exports) {
+      exports.bar();
+    });
   ```
 
-  - (RTFM:Pattern-Matching)[http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching]
+  - [RTFM:Pattern-Matching](http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching)
 
 ## License 
 
