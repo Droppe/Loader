@@ -1,6 +1,6 @@
 # Loader
 
-Loader ```require()```s files based on pattern.
+Loader require()s files based on pattern.
 
 ## Installation
 
