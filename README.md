@@ -60,7 +60,7 @@ var loader = require('node-glob-loader')
 loader.load('./foo/**/*.js', function (exports) {
   exports.bar();
 }).then(funtion () {
-  // Do Somthing Nice
+  // Do Something Nice
 });
 ```
 
