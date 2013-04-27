@@ -12,34 +12,34 @@ A very simple loader to require() based on glob pattern matching.
 
 ## Examples
 
-  ### Load a single file
-  ```js
-    var loader = require('node-loader')
+### Load a Single file
+```js
+  var loader = require('node-loader')
 
-    loader.load('./foo.js', function (exports) {
-      exports.foo();
-    });
-  ```
+  loader.load('./foo.js', function (exports) {
+    exports.foo();
+  });
+```
 
-  ### Load a directory
-  ```js
-    var loader = require('node-loader')
+### Load a Directory
+```js
+  var loader = require('node-loader')
 
-    loader.load('./foo/*.js', function (exports) {
-      exports.foo();
-    }).done(function () {
-      //Yeah!
-    });
-  ```
+  loader.load('./foo/*.js', function (exports) {
+    exports.foo();
+  }).done(function () {
+    //Yeah!
+  });
+```
 
-  ### Exclude foo.js
-  ```js
-    var loader = require('node-loader')
+### Exclude foo.js
+```js
+  var loader = require('node-loader')
 
-    loader.load('./foo/[!foo]*.js', function (exports) {
-      exports.bar();
-    });
-  ```
+  loader.load('./foo/[!foo]*.js', function (exports) {
+    exports.bar();
+  });
+```
 
   - [RTFM:Pattern-Matching](http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching)
 
