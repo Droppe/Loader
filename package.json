@@ -10,7 +10,11 @@
     "url": "https://github.com/Droppe/Loader.git"
   },
   "dependencies": {
-    "promised-io": "~0.3.3"
+    "promised-io": "~0.3.3",
+    "glob": "~3.2.1"
+  },
+  "scripts": {
+    "test": "supervisor -w spec/,lib/ -n exit -x jasmine-node spec/"
   },
   "main": "index"
 }
