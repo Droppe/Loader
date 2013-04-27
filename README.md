@@ -33,7 +33,7 @@ function load(pattern, [options], callback) {
   });
 ```
 
-### Load a Directory
+### Load a Directory, when your [DONE](https://github.com/kriszyp/promised-io) – YEAH!
 ```js
   var loader = require('node-glob-loader')
 
@@ -44,13 +44,22 @@ function load(pattern, [options], callback) {
   });
 ```
 
-### Exclude foo.js
+### Load the ```foo``` Directory Excluding bar.js
 ```js
   var loader = require('node-glob-loaderr')
 
-  loader.load('./foo/[!foo]*.js', function (exports) {
+  loader.load('./foo/[!bar]*.js', function (exports) {
     exports.bar();
   });
+```
+
+### Load .js Files in ```foo```'s Tree (THEN)(https://github.com/kriszyp/promised-io) Do Something Nice
+```
+var loader = require('node-glob-loader')
+
+loader.load('./foo/**/*.js', function (exports) {
+  exports.bar();
+});
 ```
 
 ## [RTFM:Pattern-Matching](http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching)
