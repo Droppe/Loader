@@ -49,7 +49,7 @@ describe('loader', function() {
   it('should load files matching a complex pattern', function (done) {
     var load = 0;
 
-    loader.load('./spec/dir_to_load/**/[!foo]*.js', {debug: true}, function (exports) {
+    loader.load('./spec/dir_to_load/**/[!foo]*.js', {}, function (exports) {
       if (exports('Hello World!') === 'Hello World!') {
         load += 1;
       }
