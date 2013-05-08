@@ -1,6 +1,6 @@
 # Loader
 
-A very simple loader to ```require()``` based on glob pattern matching. Please contribute by writting tests and examples.
+A very simple loader to ```require()``` based on glob pattern matching. Please contribute by writing tests and examples.
 
 ## Installation
 
@@ -13,18 +13,18 @@ A very simple loader to ```require()``` based on glob pattern matching. Please c
 ## Signatures
 
 ```js
-function load(pattern, [options], callback) {
+function load(pattern, [options], [callback]) {
   /*...*/
 }
 ```
 
 - pattern: a glob pattern
 - options: an optional [options](https://github.com/isaacs/node-glob#options) object
-- callback: a callback that is called once per matched file with its ```exports```
+- callback: an optional callback that is called once per matched file with its ```exports```
 
 ## Examples
 
-### Load a Single File
+### Load a single file
 ```js
   var loader = require('node-glob-loader')
 
@@ -33,7 +33,7 @@ function load(pattern, [options], callback) {
   });
 ```
 
-### Load a Directory... When You're [DONE](https://github.com/kriszyp/promised-io) – YEAH!
+### Load a directory... When you're [DONE](https://github.com/kriszyp/promised-io) – YEAH!
 ```js
   var loader = require('node-glob-loader')
 
@@ -53,7 +53,7 @@ function load(pattern, [options], callback) {
   });
 ```
 
-### Load ```.js``` Files in ```foo```'s Tree [THEN](https://github.com/kriszyp/promised-io) Do Something Nice
+### Load ```.js``` Files in ```foo```'s Tree [THEN](https://github.com/kriszyp/promised-io) do something nice
 ```js
 var loader = require('node-glob-loader')
 
@@ -62,6 +62,11 @@ loader.load('./foo/**/*.js', function (exports) {
 }).then(funtion () {
   // Do Something Nice
 });
+```
+
+### Like the above, sans fancy
+```js
+loader.load('./foo/**/*.js');
 ```
 
 ## [RTFM:Pattern-Matching](http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching)

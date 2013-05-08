@@ -59,4 +59,11 @@ describe('loader', function() {
     });
   });
 
+  it('optional the callback should be optional', function (done) {
+    loader.load('./spec/dir_to_load/**/*.js').then(function () {
+      expect(1).toEqual(1);
+      done();
+    });
+  });
+
 });
