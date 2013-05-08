@@ -44,7 +44,7 @@ function load(pattern, [options], [callback]) {
   });
 ```
 
-### Load the ```foo``` Directory Excluding ```bar.js```
+### Load the ```foo``` directory excluding ```bar.js```
 ```js
   var loader = require('node-glob-loaderr')
 
@@ -53,7 +53,7 @@ function load(pattern, [options], [callback]) {
   });
 ```
 
-### Load ```.js``` Files in ```foo```'s Tree [THEN](https://github.com/kriszyp/promised-io) do something nice
+### Load ```.js``` files in ```foo```'s tree [THEN](https://github.com/kriszyp/promised-io) do something nice
 ```js
 var loader = require('node-glob-loader')
 
