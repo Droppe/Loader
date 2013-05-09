@@ -71,7 +71,7 @@ loader.load('./foo/**/*.js');
 
 ### Leeloo Dallas mul-ti-glob. Load multiple patterns at once.
 ```js
-loader.load([./foo.js', './foo/**/*.js'], function () {
+loader.load(['./foo.js', './foo/**/*.js'], function () {
   exports.foo();
 });
 ```
