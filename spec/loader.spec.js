@@ -66,4 +66,17 @@ describe('loader', function() {
     });
   });
 
+  it('should load multiple files matching multiple patterns', function (done) {
+    var load = 0;
+
+    loader.load(['./spec/dir_to_load/foo.js', './spec/dir_to_load/bar.js'], function (exports) {
+      if (exports('Hello World!') === 'Hello World!') {
+        load += 1;
+      }
+    }).then(function () {
+      expect(load).toEqual(2);
+      done();
+    });
+  });
+
 });

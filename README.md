@@ -7,7 +7,7 @@ A very simple loader to ```require()``` based on glob pattern matching. Please c
     $ npm install node-glob-loader
 
 ## Features
-  - supports glob matching ala [node-glob](https://github.com/isaacs/node-glob)
+  - supports glob/multi glob matching ala [node-glob](https://github.com/isaacs/node-glob), [multi-glob](https://github.com/busterjs/multi-glob)
   - supports deferrals ala [promised-io](https://github.com/kriszyp/promised-io)
 
 ## Signatures
@@ -18,7 +18,7 @@ function load(pattern, [options], [callback]) {
 }
 ```
 
-- pattern: a glob pattern
+- pattern: a glob pattern or an Array of patterns
 - options: an optional [options](https://github.com/isaacs/node-glob#options) object
 - callback: an optional callback that is called once per matched file with its ```exports```
 
@@ -67,6 +67,13 @@ loader.load('./foo/**/*.js', function (exports) {
 ### Like the above, sans fancy
 ```js
 loader.load('./foo/**/*.js');
+```
+
+### Leeloo Dallas mul-ti-glob. Load multiple patterns at once.
+```js
+loader.load([./foo.js', './foo/**/*.js'], function () {
+  exports.foo();
+});
 ```
 
 ## [RTFM:Pattern-Matching](http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching)
