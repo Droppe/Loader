@@ -18,7 +18,7 @@ function load(pattern, [options], [callback]) {
 }
 ```
 
-- pattern: a glob pattern or an Array of patterns
+- pattern: a glob pattern or an array of patterns
 - options: an optional [options](https://github.com/isaacs/node-glob#options) object
 - callback: an optional callback that is called once per matched file with its ```exports```
 
