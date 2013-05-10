@@ -23,7 +23,7 @@
     "require"
   ],
   "scripts": {
-    "test": "jasmine-node spec/"
+    "test": "jasmine-node spec/",
     "start": "supervisor -w spec/,lib/ -n exit -x npm test"
   },
   "main": "index"
