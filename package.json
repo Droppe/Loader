@@ -11,14 +11,10 @@
     "promised-io": "~0.3.3",
     "multi-glob": "~0.4.0"
   },
-  "devDependencies": {
-    "supervisor": "*",
-    "jasmine-node": "*"
-  },
   "keywords": [
     "node-glob-loader",
     "droppe",
-    "autoload",
+    "auto-load",
     "bootstrap",
     "glob",
     "require"

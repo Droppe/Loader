@@ -26,7 +26,7 @@ function load(pattern, [options], [callback]) {
 
 ### Load a single file
 ```js
-  var loader = require('node-glob-loader')
+  var loader = require('node-glob-loader');
 
   loader.load('./foo.js', function (exports) {
     exports.foo();
@@ -35,7 +35,7 @@ function load(pattern, [options], [callback]) {
 
 ### Load a directory... When you're [DONE](https://github.com/kriszyp/promised-io) – YEAH!
 ```js
-  var loader = require('node-glob-loader')
+  var loader = require('node-glob-loader');
 
   loader.load('./foo/*.js', function (exports) {
     exports.foo();
@@ -46,7 +46,7 @@ function load(pattern, [options], [callback]) {
 
 ### Load the ```foo``` directory excluding ```bar.js```
 ```js
-  var loader = require('node-glob-loaderr')
+  var loader = require('node-glob-loader');
 
   loader.load('./foo/[!bar]*.js', function (exports) {
     exports.bar();
@@ -55,7 +55,7 @@ function load(pattern, [options], [callback]) {
 
 ### Load ```.js``` files in ```foo```'s tree [THEN](https://github.com/kriszyp/promised-io) do something nice
 ```js
-var loader = require('node-glob-loader')
+var loader = require('node-glob-loader');
 
 loader.load('./foo/**/*.js', function (exports) {
   exports.bar();
@@ -66,11 +66,15 @@ loader.load('./foo/**/*.js', function (exports) {
 
 ### Like the above, sans fancy
 ```js
+var loader = require('node-glob-loader');
+
 loader.load('./foo/**/*.js');
 ```
 
 ### Leeloo Dallas mul-ti-glob. Load multiple patterns at once.
 ```js
+var loader = require('node-glob-loader');
+
 loader.load(['./foo.js', './foo/**/*.js'], function () {
   exports.foo();
 });
