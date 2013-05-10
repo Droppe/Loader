@@ -1,6 +1,7 @@
 # Loader
 
 A very simple loader to ```require()``` based on glob pattern matching. Please contribute by writing tests and examples.
+
 [![Build Status](https://travis-ci.org/Droppe/Loader.png?branch=master)](https://travis-ci.org/Droppe/Loader)
 
 ## Installation
