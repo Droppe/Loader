@@ -1,6 +1,6 @@
 {
   "name": "node-glob-loader",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A very simple loader to require() based on glob pattern matching.",
   "author": "Robert Martone <robert@drop.pe>",
   "repository": {
@@ -23,5 +23,6 @@
     "test": "jasmine-node spec/",
     "start": "supervisor -w spec/,lib/ -n exit -x npm test"
   },
-  "main": "index"
+  "main": "index",
+  "contributors": ["Andreas Pizsa <hopster@gmail.com> (http://github.com/AndreasPizsa)"]
 }
