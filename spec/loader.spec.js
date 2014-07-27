@@ -59,7 +59,7 @@ describe('loader', function() {
     });
   });
 
-  it('optional the callback should receive the file name as a parameter', function (done) {
+  it('optional the callback should be optional', function (done) {
     loader.load('./spec/dir_to_load/**/*.js').then(function () {
       expect(1).toEqual(1);
       done();
