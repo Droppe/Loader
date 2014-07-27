@@ -24,5 +24,8 @@
     "start": "supervisor -w spec/,lib/ -n exit -x npm test"
   },
   "main": "index",
-  "contributors": ["Andreas Pizsa <hopster@gmail.com> (http://github.com/AndreasPizsa)"]
+  "contributors": ["Andreas Pizsa <hopster@gmail.com> (http://github.com/AndreasPizsa)"],
+  "engines" : {
+    "node" : ">=0.10"
+  }
 }
