@@ -22,7 +22,7 @@ function load(pattern, [options], [callback]) {
 
 - pattern: a glob pattern or an array of patterns
 - options: an optional [options](https://github.com/isaacs/node-glob#options) object
-- callback: an optional callback that is called once per matched file with its ```exports```
+- callback: an optional callback that is called once per matched file with its ```exports``` and the file’s name.
 
 ## Examples
 
@@ -30,7 +30,8 @@ function load(pattern, [options], [callback]) {
 ```js
   var loader = require('node-glob-loader');
 
-  loader.load('./foo.js', function (exports) {
+  loader.load('./foo.js', function (exports,filename) {
+    console.log('Loaded ' + filename);
     exports.foo();
   });
 ```
@@ -39,7 +40,8 @@ function load(pattern, [options], [callback]) {
 ```js
   var loader = require('node-glob-loader');
 
-  loader.load('./foo/*.js', function (exports) {
+  loader.load('./foo/*.js', function (exports,filename) {
+    console.log('Loaded ' + filename);
     exports.foo();
   }).done(function () {
     // Yeah!
@@ -50,7 +52,8 @@ function load(pattern, [options], [callback]) {
 ```js
   var loader = require('node-glob-loader');
 
-  loader.load('./foo/[!bar]*.js', function (exports) {
+  loader.load('./foo/[!bar]*.js', function (exports,filename) {
+    console.log('Loaded ' + filename);
     exports.bar();
   });
 ```
@@ -59,7 +62,8 @@ function load(pattern, [options], [callback]) {
 ```js
 var loader = require('node-glob-loader');
 
-loader.load('./foo/**/*.js', function (exports) {
+loader.load('./foo/**/*.js', function (exports,filename) {
+  console.log('Loaded ' + filename);
   exports.bar();
 }).then(funtion () {
   // Do Something Nice
@@ -140,7 +144,7 @@ Matches one of the given patterns.
 Matches anything except one of the given patterns.
 
 
-## License 
+## License
 
 (The MIT License)
 

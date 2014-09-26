@@ -79,4 +79,13 @@ describe('loader', function() {
     });
   });
 
+  it('should pass the file name to the callback', function (done) {
+    moduleName = './spec/dir_to_load/foo.js'
+    loader.load(moduleName, function(exports,filename){
+      expect(filename).toEqual(moduleName);
+    }).then(function(){
+      done();
+    });
+  });
+
 });
