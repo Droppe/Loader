@@ -86,7 +86,7 @@ loader.load(['./foo.js', './foo/**/*.js'], function () {
 });
 ```
 
-### Make [Hapi](http://hapijs.com/)
+### Make (@hueniverse) [Hapi](http://hapijs.com/)
 
 ```js
 var config = require("./config/" + process.env.NODE_ENV),
