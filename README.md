@@ -86,7 +86,7 @@ loader.load(['./foo.js', './foo/**/*.js'], function () {
 });
 ```
 
-### Make @hueniverse [Hapi](http://hapijs.com/) with a real world example
+### Make the @hueniverse [Hapi](http://hapijs.com/) with a real world example
 
 ```js
 var config = require("./config/" + process.env.NODE_ENV),
