@@ -52,7 +52,7 @@ function load(pattern, [options], [callback]) {
 ```js
   var loader = require('node-glob-loader');
 
-  loader.load('./foo/[!bar]*.js', function (exports,filename) {
+  loader.load('./foo/[!bar]*.js', function (exports, filename) {
     console.log('Loaded ' + filename);
     exports.bar();
   });
@@ -62,7 +62,7 @@ function load(pattern, [options], [callback]) {
 ```js
 var loader = require('node-glob-loader');
 
-loader.load('./foo/**/*.js', function (exports,filename) {
+loader.load('./foo/**/*.js', function (exports, filename) {
   console.log('Loaded ' + filename);
   exports.bar();
 }).then(funtion () {
@@ -77,12 +77,52 @@ var loader = require('node-glob-loader');
 loader.load('./foo/**/*.js');
 ```
 
-### Leeloo Dallas mul-ti-glob. Load multiple patterns at once.
+### Leeloo Dallas mul-ti-glob: Load multiple patterns at once
 ```js
 var loader = require('node-glob-loader');
 
 loader.load(['./foo.js', './foo/**/*.js'], function () {
   exports.foo();
+});
+```
+
+### Make [Hapi](http://hapijs.com/)
+
+```js
+var config = require("./config/" + process.env.NODE_ENV),
+  pckg = require("./package.json"),
+  bunyan = require("bunyan"),
+  hapi = require("hapi"),
+  server,
+  logger;
+
+logger = bunyan.createLogger({
+  name: pckg.name,
+  serializers: bunyan.stdSerializers
+});
+
+server = hapi.createServer(
+  config.application.host,
+  config.application.port,
+  config.application.options
+);
+
+server.app.logger = logger;
+server.app.configuration = config;
+
+server.start(function (error, info) {
+  var loader;
+  if (error) {
+    return logger.error(error);
+  }
+
+  logger.info("Server started @" + server.info);
+
+  loader = require("node-glob-loader");
+  loader.load("./application/routes/*.*", function (routes, name) {
+    logger.info("Loading routes from " + name);
+    server.route(routes);
+  });
 });
 ```
 
