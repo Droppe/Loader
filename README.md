@@ -11,6 +11,7 @@ A very simple loader to ```require()``` based on glob pattern matching. Please c
 ## Features
   - supports glob/multi glob matching ala [node-glob](https://github.com/isaacs/node-glob), [multi-glob](https://github.com/busterjs/multi-glob)
   - supports deferrals ala [promised-io](https://github.com/kriszyp/promised-io)
+  - suports asynchronous loading via [async](https://github.com/caolan/async).
 
 ## Signatures
 
@@ -21,7 +22,9 @@ function load(pattern, [options], [callback]) {
 ```
 
 - pattern: a glob pattern or an array of patterns
-- options: an optional [options](https://github.com/isaacs/node-glob#options) object
+- options: an optional object
+ - strict: When set to true, glob will yield an error if a pattern matches no files.
+ - limit: ensures synchronised loading. *Note that under most use-cases files will be loaded 1 at a time*
 - callback: an optional callback that is called once per matched file with its ```exports``` and the file’s name.
 
 ## Examples
