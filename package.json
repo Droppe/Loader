@@ -1,6 +1,6 @@
 {
   "name": "node-glob-loader",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "A very simple loader to require() based on glob pattern matching.",
   "author": "Robert Martone <robert@drop.pe>",
   "repository": {
