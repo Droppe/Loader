@@ -24,8 +24,13 @@
     "start": "supervisor -w spec/,lib/ -n exit -x npm test"
   },
   "main": "index",
-  "contributors": ["Andreas Pizsa <hopster@gmail.com> (http://github.com/AndreasPizsa)"],
-  "engines" : {
-    "node" : ">=0.10"
+  "contributors": [
+    "Andreas Pizsa <hopster@gmail.com> (http://github.com/AndreasPizsa)"
+  ],
+  "engines": {
+    "node": ">=0.10"
+  },
+  "devDependencies": {
+    "async": "~0.9.0"
   }
 }
