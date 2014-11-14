@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "promised-io": "~0.3.3",
-    "multi-glob": "~0.4.0"
+    "multi-glob": "~0.4.0",
+    "async": "~0.9.0"
   },
   "keywords": [
     "node-glob-loader",
@@ -30,7 +31,5 @@
   "engines": {
     "node": ">=0.10"
   },
-  "devDependencies": {
-    "async": "~0.9.0"
-  }
+  "devDependencies": {}
 }
